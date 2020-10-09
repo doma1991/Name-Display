@@ -1,0 +1,27 @@
+﻿@page
+@model Unit2App.Pages.NameDisplayModel
+@{
+
+    ViewData["Title"] = "Display my name";
+}
+
+<h2>Hello User! </h2>
+<br />
+<h3>Welcome to my page!</h3>
+<br />
+<h3>Time on the server is @DateTime.Now</h3>
+<br />
+<p>Please entr your name in the box below.</p>
+<div asp-validation-summary="All"></div>
+
+<form method="post">
+
+    <div>Name: <input asp-for="name" />
+        <input type="submit" />
+    </div>
+    
+</form>
+
+<br />
+
+<div id="result"><b>@this.Model.name</b></div>
